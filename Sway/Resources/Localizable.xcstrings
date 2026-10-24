@@ -1,0 +1,1415 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%lld": {
+      "shouldTranslate": false
+    },
+    "%lld entries not synced": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld entry not synced"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld entries not synced"
+                }
+              }
+            }
+          }
+        },
+        "pt": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld registo por sincronizar"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld registos por sincronizar"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld exercises": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld exercise"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld exercises"
+                }
+              }
+            }
+          }
+        },
+        "pt": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld exercício"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld exercícios"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld h": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld h"
+          }
+        }
+      }
+    },
+    "%lld reps × %lld sets · hold %llds, rest %llds": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld repetições × %2$lld séries · contrair %3$llds, descansar %4$llds"
+          }
+        }
+      }
+    },
+    "0": {
+      "shouldTranslate": false
+    },
+    "About %lld min": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerca de %lld min"
+          }
+        }
+      }
+    },
+    "About the Bristol scale": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sobre a escala de Bristol"
+          }
+        }
+      }
+    },
+    "Accident": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acidente"
+          }
+        }
+      }
+    },
+    "Account": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conta"
+          }
+        }
+      }
+    },
+    "Add entry": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar registo"
+          }
+        }
+      }
+    },
+    "Amount": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quantidade"
+          }
+        }
+      }
+    },
+    "Amount (e.g. small, large)": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quantidade (ex: pequena, grande)"
+          }
+        }
+      }
+    },
+    "Bowel movement": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evacuação"
+          }
+        }
+      }
+    },
+    "Bowel movements": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evacuações"
+          }
+        }
+      }
+    },
+    "Bristol scale": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escala de Bristol"
+          }
+        }
+      }
+    },
+    "Bristol stool scale": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escala de Bristol"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        }
+      }
+    },
+    "Close": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fechar"
+          }
+        }
+      }
+    },
+    "Coffee": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Café"
+          }
+        }
+      }
+    },
+    "Connect to your therapist": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ligue-se ao seu terapeuta"
+          }
+        }
+      }
+    },
+    "Considerable": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Considerável"
+          }
+        }
+      }
+    },
+    "Couldn't load your exercises": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível carregar os exercícios"
+          }
+        }
+      }
+    },
+    "Credits": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ficha técnica"
+          }
+        }
+      }
+    },
+    "Delete entry": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apagar registo"
+          }
+        }
+      }
+    },
+    "Deleting only removes the entry from this device.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apagar só remove o registo deste dispositivo."
+          }
+        }
+      }
+    },
+    "Diary": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diário"
+          }
+        }
+      }
+    },
+    "Documents": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documentos"
+          }
+        }
+      }
+    },
+    "Done": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
+    "Drink": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bebida"
+          }
+        }
+      }
+    },
+    "Drink water": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beber água"
+          }
+        }
+      }
+    },
+    "Effort": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esforço"
+          }
+        }
+      }
+    },
+    "End session": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar sessão"
+          }
+        }
+      }
+    },
+    "End session?": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar sessão?"
+          }
+        }
+      }
+    },
+    "Enter code": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Introduzir código"
+          }
+        }
+      }
+    },
+    "Enter prescription code": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Introduzir código da prescrição"
+          }
+        }
+      }
+    },
+    "Enter the code from your prescription to see your exercises and share your diary.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Introduza o código da sua prescrição para ver os exercícios e partilhar o seu diário."
+          }
+        }
+      }
+    },
+    "Enter the code from your therapist to see your exercises.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Introduza o código do seu terapeuta para ver os exercícios."
+          }
+        }
+      }
+    },
+    "Every": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A cada"
+          }
+        }
+      }
+    },
+    "Exercise %lld": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exercício %lld"
+          }
+        }
+      }
+    },
+    "Exercise %lld of %lld · Rep %lld of %lld · Set %lld of %lld": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exercício %1$lld de %2$lld · Repetição %3$lld de %4$lld · Série %5$lld de %6$lld"
+          }
+        }
+      }
+    },
+    "Exercise time": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hora dos exercícios"
+          }
+        }
+      }
+    },
+    "Exercises": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exercícios"
+          }
+        }
+      }
+    },
+    "Extreme": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extrema"
+          }
+        }
+      }
+    },
+    "Felt empty": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sensação de esvaziamento"
+          }
+        }
+      }
+    },
+    "Felt empty afterwards": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sensação de esvaziamento"
+          }
+        }
+      }
+    },
+    "Fluffy, ragged pieces": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pedaços esponjosos e irregulares"
+          }
+        }
+      }
+    },
+    "Fluids": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Líquidos"
+          }
+        }
+      }
+    },
+    "From": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das"
+          }
+        }
+      }
+    },
+    "From your therapist": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do seu terapeuta"
+          }
+        }
+      }
+    },
+    "Have a glass of water and log it in your diary.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beba um copo de água e registe-o no diário."
+          }
+        }
+      }
+    },
+    "Hello, %@": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Olá, %@"
+          }
+        }
+      }
+    },
+    "Leaked": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Houve perdas"
+          }
+        }
+      }
+    },
+    "Leaks": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perdas"
+          }
+        }
+      }
+    },
+    "Leave the volume empty if you didn't measure it.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deixe o volume vazio se não o mediu."
+          }
+        }
+      }
+    },
+    "Lifestyle": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estilo de vida"
+          }
+        }
+      }
+    },
+    "Log drinks, bathroom visits and sleep to build your diary.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registe bebidas, idas à casa de banho e sono para construir o seu diário."
+          }
+        }
+      }
+    },
+    "Lumpy, sausage-shaped": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forma de salsicha grumosa"
+          }
+        }
+      }
+    },
+    "Maximum": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Máximo"
+          }
+        }
+      }
+    },
+    "Mild": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ligeira"
+          }
+        }
+      }
+    },
+    "Mild, could delay 30 min": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ligeira, podia esperar 30 min"
+          }
+        }
+      }
+    },
+    "Minimal": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mínimo"
+          }
+        }
+      }
+    },
+    "Moderate": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moderada"
+          }
+        }
+      }
+    },
+    "Moderate, could delay 15 min": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moderada, podia esperar 15 min"
+          }
+        }
+      }
+    },
+    "Name": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nome"
+          }
+        }
+      }
+    },
+    "Next": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seguinte"
+          }
+        }
+      }
+    },
+    "No": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não"
+          }
+        }
+      }
+    },
+    "No entries yet": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ainda sem registos"
+          }
+        }
+      }
+    },
+    "No prescription": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem prescrição"
+          }
+        }
+      }
+    },
+    "No urge": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem urgência"
+          }
+        }
+      }
+    },
+    "None": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma"
+          }
+        }
+      }
+    },
+    "Not synced": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não sincronizado"
+          }
+        }
+      }
+    },
+    "Notes": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notas"
+          }
+        }
+      }
+    },
+    "Notifications are turned off for Sway. Open Settings to allow them.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "As notificações do Sway estão desligadas. Abra as Definições para as permitir."
+          }
+        }
+      }
+    },
+    "Optional": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opcional"
+          }
+        }
+      }
+    },
+    "Other": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Outra"
+          }
+        }
+      }
+    },
+    "Pause": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pausa"
+          }
+        }
+      }
+    },
+    "Prescription code": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Código da prescrição"
+          }
+        }
+      }
+    },
+    "Previous": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anterior"
+          }
+        }
+      }
+    },
+    "Quick add": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar rápido"
+          }
+        }
+      }
+    },
+    "Raced to the toilet": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Correu para a casa de banho"
+          }
+        }
+      }
+    },
+    "Relax": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relaxe"
+          }
+        }
+      }
+    },
+    "Relax in %lld…": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relaxe em %lld…"
+          }
+        }
+      }
+    },
+    "Reminders": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lembretes"
+          }
+        }
+      }
+    },
+    "Resume": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retomar"
+          }
+        }
+      }
+    },
+    "Retry": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tentar de novo"
+          }
+        }
+      }
+    },
+    "Sausage with cracks": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salsicha com fissuras"
+          }
+        }
+      }
+    },
+    "Save": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
+          }
+        }
+      }
+    },
+    "Separate hard lumps": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caroços duros separados"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Definições"
+          }
+        }
+      }
+    },
+    "Sign in": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrar"
+          }
+        }
+      }
+    },
+    "Sign in again to sync your diary.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entre novamente para sincronizar o diário."
+          }
+        }
+      }
+    },
+    "Sign in to share your diary with your therapist.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entre para partilhar o diário com o seu terapeuta."
+          }
+        }
+      }
+    },
+    "Sign out": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar sessão"
+          }
+        }
+      }
+    },
+    "Sign out?": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar sessão?"
+          }
+        }
+      }
+    },
+    "Sleep": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dormir"
+          }
+        }
+      }
+    },
+    "Smooth, soft sausage": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salsicha lisa e mole"
+          }
+        }
+      }
+    },
+    "Soft blobs, clear edges": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pedaços moles com bordos definidos"
+          }
+        }
+      }
+    },
+    "Squeeze and hold": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contraia e mantenha"
+          }
+        }
+      }
+    },
+    "Squeeze in %lld…": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contraia em %lld…"
+          }
+        }
+      }
+    },
+    "Start session": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Começar exercícios"
+          }
+        }
+      }
+    },
+    "Stool type": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tipo de fezes"
+          }
+        }
+      }
+    },
+    "Strong": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forte"
+          }
+        }
+      }
+    },
+    "Strong, couldn't delay over 5 min": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forte, não podia esperar mais de 5 min"
+          }
+        }
+      }
+    },
+    "Synced": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sincronizado"
+          }
+        }
+      }
+    },
+    "Take a few minutes for today's exercises.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reserve uns minutos para os exercícios de hoje."
+          }
+        }
+      }
+    },
+    "Tea": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chá"
+          }
+        }
+      }
+    },
+    "Thanks to everyone who contributed to this project.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obrigado a todos os que contribuíram para este projeto."
+          }
+        }
+      }
+    },
+    "The server returned an error (%lld).": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O servidor devolveu um erro (%lld)."
+          }
+        }
+      }
+    },
+    "They'll be sent when you're online.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serão enviados quando estiver online."
+          }
+        }
+      }
+    },
+    "Time": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hora"
+          }
+        }
+      }
+    },
+    "Time for some water": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hora de beber água"
+          }
+        }
+      }
+    },
+    "Time taken": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempo"
+          }
+        }
+      }
+    },
+    "Today": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoje"
+          }
+        }
+      }
+    },
+    "Today's exercises": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exercícios de hoje"
+          }
+        }
+      }
+    },
+    "Try again": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tentar de novo"
+          }
+        }
+      }
+    },
+    "Type": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tipo"
+          }
+        }
+      }
+    },
+    "Type %lld": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tipo %lld"
+          }
+        }
+      }
+    },
+    "Types 3 and 4 are considered normal. Types 1–2 suggest constipation and 6–7 diarrhoea.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Os tipos 3 e 4 são considerados normais. Os tipos 1–2 sugerem obstipação e os 6–7 diarreia."
+          }
+        }
+      }
+    },
+    "Until": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Até às"
+          }
+        }
+      }
+    },
+    "Urgency": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Urgência"
+          }
+        }
+      }
+    },
+    "Urination": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Micção"
+          }
+        }
+      }
+    },
+    "Urinations": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Micções"
+          }
+        }
+      }
+    },
+    "Version": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versão"
+          }
+        }
+      }
+    },
+    "Volume": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volume"
+          }
+        }
+      }
+    },
+    "Wake up": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acordar"
+          }
+        }
+      }
+    },
+    "Water": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Água"
+          }
+        }
+      }
+    },
+    "Watery, no solid pieces": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aquoso, sem partes sólidas"
+          }
+        }
+      }
+    },
+    "We couldn't find a prescription with that code.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não encontrámos nenhuma prescrição com esse código."
+          }
+        }
+      }
+    },
+    "Welcome to Sway": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bem-vindo/a ao Sway"
+          }
+        }
+      }
+    },
+    "Well done!": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muito bem!"
+          }
+        }
+      }
+    },
+    "Yes": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sim"
+          }
+        }
+      }
+    },
+    "You finished today's exercises.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Concluiu os exercícios de hoje."
+          }
+        }
+      }
+    },
+    "You'll find the code on the prescription your therapist sent you.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Encontra o código na prescrição que o seu terapeuta lhe enviou."
+          }
+        }
+      }
+    },
+    "Your diary stays on this device when you sign out.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O seu diário fica neste dispositivo quando termina a sessão."
+          }
+        }
+      }
+    },
+    "ml": {
+      "shouldTranslate": false
+    },
+    "© %@ Sway. All rights reserved.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© %@ Sway. Todos os direitos reservados."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
