@@ -3,6 +3,7 @@ import SwiftUI
 struct SignInView: View {
     @Environment(SessionStore.self) private var session
     @Environment(DiaryStore.self) private var diary
+    @Environment(ExerciseRunStore.self) private var exerciseRuns
     @Environment(\.dismiss) private var dismiss
     @State private var code = ""
     @State private var isLoading = false
@@ -61,6 +62,7 @@ struct SignInView: View {
             do {
                 try await session.signIn(code: code)
                 await diary.syncPending(token: session.submissionToken)
+                await exerciseRuns.syncPending(token: session.submissionToken)
                 dismiss()
             } catch {
                 errorMessage = error.localizedDescription

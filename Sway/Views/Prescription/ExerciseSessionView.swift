@@ -3,7 +3,10 @@ import SwiftUI
 /// Guided hold/rest session: a circle grows while holding and shrinks while resting.
 struct ExerciseSessionView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(SessionStore.self) private var session
+    @Environment(ExerciseRunStore.self) private var exerciseRuns
     let steps: [ExerciseStep]
+    var prescriptionId: Int?
 
     @State private var index = 0
     @State private var elapsedBeforePause: TimeInterval = 0
@@ -12,6 +15,9 @@ struct ExerciseSessionView: View {
     @State private var finished = false
     @State private var confirmingExit = false
     @State private var tones = TonePlayer()
+    @State private var startedAt = Date.now
+    @State private var recorded = false
+    @State private var pausedForDialog = false
 
     private var step: ExerciseStep? { steps.indices.contains(index) ? steps[index] : nil }
 
@@ -38,10 +44,23 @@ struct ExerciseSessionView: View {
                 }
             }
             .confirmationDialog("End session?", isPresented: $confirmingExit, titleVisibility: .visible) {
-                Button("End session", role: .destructive) { dismiss() }
+                Button("Terminate", role: .destructive) { terminate() }
+            } message: {
+                Text("Your progress so far will be shared with your therapist.")
+            }
+            .onChange(of: confirmingExit) { _, showing in
+                // Hold the timer while deciding; resume if the patient cancels.
+                if showing, !paused, !finished {
+                    togglePause()
+                    pausedForDialog = true
+                } else if !showing, pausedForDialog {
+                    pausedForDialog = false
+                    if paused { togglePause() }
+                }
             }
         }
         .onAppear {
+            startedAt = .now
             UIApplication.shared.isIdleTimerDisabled = true
             tones.start()
             tones.play(.newRepetition)
@@ -123,6 +142,11 @@ struct ExerciseSessionView: View {
                 .accessibilityLabel(Text("Next"))
             }
             .font(.title)
+
+            Button("Terminate", role: .destructive) {
+                confirmingExit = true
+            }
+            .buttonStyle(.bordered)
         }
         .onChange(of: remaining <= 0) { _, done in
             if done, !paused { advance(to: index + 1) }
@@ -142,6 +166,34 @@ struct ExerciseSessionView: View {
             Button("Done") { dismiss() }
                 .buttonStyle(.borderedProminent)
         }
+        .overlay {
+            if !steps.isEmpty {
+                ConfettiView()
+                    .ignoresSafeArea()
+                    .allowsHitTesting(false)
+            }
+        }
+    }
+
+    private func terminate() {
+        record(terminatedEarly: true)
+        dismiss()
+    }
+
+    /// Saves the run once, locally first, then sends it like a diary entry.
+    private func record(terminatedEarly: Bool) {
+        guard !recorded, !steps.isEmpty else { return }
+        recorded = true
+        let run = ExerciseRun(
+            prescriptionId: prescriptionId,
+            startedAt: startedAt,
+            endedAt: .now,
+            completedSteps: terminatedEarly ? index : steps.count,
+            totalSteps: steps.count,
+            terminatedEarly: terminatedEarly
+        )
+        let token = session.submissionToken
+        Task { await exerciseRuns.add(run, token: token) }
     }
 
     private func togglePause() {
@@ -158,7 +210,8 @@ struct ExerciseSessionView: View {
         stepStartedAt = .now
         if newIndex >= steps.count {
             finished = true
-            tones.play(.newRepetition)
+            tones.play(.celebration)
+            record(terminatedEarly: false)
         } else {
             index = max(0, newIndex)
             // A hold starts a new repetition; switching to rest gets the short beep.
@@ -172,4 +225,6 @@ struct ExerciseSessionView: View {
         ExerciseStep(action: .hold, duration: 3, exerciseIndex: 0, exerciseCount: 1, repetition: 0, repetitionCount: 2, set: 0, setCount: 1),
         ExerciseStep(action: .rest, duration: 3, exerciseIndex: 0, exerciseCount: 1, repetition: 0, repetitionCount: 2, set: 0, setCount: 1),
     ])
+    .environment(SessionStore())
+    .environment(ExerciseRunStore())
 }

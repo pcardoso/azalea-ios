@@ -121,7 +121,7 @@ struct PrescriptionDetailView: View {
             try? await session.refreshPrescription()
         }
         .fullScreenCover(isPresented: $runningSession) {
-            ExerciseSessionView(steps: prescription.exerciseSequence)
+            ExerciseSessionView(steps: prescription.exerciseSequence, prescriptionId: prescription.prescription.id)
         }
         .sheet(item: $openDocument) { document in
             SafariView(url: APIClient.shared.fileURL(for: document))

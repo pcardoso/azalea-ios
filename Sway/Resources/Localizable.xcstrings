@@ -367,16 +367,6 @@
         }
       }
     },
-    "End session": {
-      "localizations": {
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Terminar sessão"
-          }
-        }
-      }
-    },
     "End session?": {
       "localizations": {
         "pt": {
@@ -1117,6 +1107,16 @@
         }
       }
     },
+    "Terminate": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar"
+          }
+        }
+      }
+    },
     "Thanks to everyone who contributed to this project.": {
       "localizations": {
         "pt": {
@@ -1393,6 +1393,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "O seu diário fica neste dispositivo quando termina a sessão."
+          }
+        }
+      }
+    },
+    "Your progress so far will be shared with your therapist.": {
+      "localizations": {
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O progresso até agora será partilhado com o seu terapeuta."
           }
         }
       }

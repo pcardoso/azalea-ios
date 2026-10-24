@@ -51,6 +51,27 @@ struct APIClient: Sendable {
         try Self.validate(response)
     }
 
+    func submit(_ run: ExerciseRun, token: String) async throws {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        var body: [String: Any] = [
+            "startedAt": formatter.string(from: run.startedAt),
+            "endedAt": formatter.string(from: run.endedAt),
+            "completedSteps": run.completedSteps,
+            "totalSteps": run.totalSteps,
+            "terminatedEarly": run.terminatedEarly,
+        ]
+        if let prescriptionId = run.prescriptionId { body["prescriptionId"] = prescriptionId }
+
+        var request = URLRequest(url: baseURL.appending(path: "pub/exercise-runs"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        let (_, response) = try await URLSession.shared.data(for: request)
+        try Self.validate(response)
+    }
+
     private static func validate(_ response: URLResponse) throws {
         guard let http = response as? HTTPURLResponse else { return }
         guard (200..<300).contains(http.statusCode) else { throw APIError.http(http.statusCode) }

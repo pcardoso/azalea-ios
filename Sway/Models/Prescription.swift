@@ -13,6 +13,7 @@ struct Prescription: Decodable, Hashable, Sendable {
     }
 
     struct Details: Decodable, Hashable, Sendable {
+        var id: Int
         var code: String
         var notes: String?
     }

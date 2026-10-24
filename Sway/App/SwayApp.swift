@@ -6,6 +6,7 @@ struct SwayApp: App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     @State private var session = SessionStore()
     @State private var diary = DiaryStore()
+    @State private var exerciseRuns = ExerciseRunStore()
     @State private var reminders = ReminderSettings()
 
     var body: some Scene {
@@ -13,6 +14,7 @@ struct SwayApp: App {
             RootView()
                 .environment(session)
                 .environment(diary)
+                .environment(exerciseRuns)
                 .environment(reminders)
         }
     }
