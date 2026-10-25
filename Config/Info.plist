@@ -9,6 +9,17 @@
 		<string>en</string>
 		<string>pt</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>pt.grok.ios.sway</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>sway</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsLocalNetworking</key>

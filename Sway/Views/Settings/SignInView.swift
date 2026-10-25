@@ -5,10 +5,17 @@ struct SignInView: View {
     @Environment(DiaryStore.self) private var diary
     @Environment(ExerciseRunStore.self) private var exerciseRuns
     @Environment(\.dismiss) private var dismiss
-    @State private var code = ""
+    @State private var code: String
     @State private var isLoading = false
     @State private var errorMessage: String?
     @FocusState private var focused: Bool
+    private let linkedCode: String?
+
+    /// `linkedCode` comes from a prescription link: it's filled in and submitted right away.
+    init(linkedCode: String? = nil) {
+        self.linkedCode = linkedCode
+        _code = State(initialValue: linkedCode ?? "")
+    }
 
     var body: some View {
         NavigationStack {
@@ -48,7 +55,10 @@ struct SignInView: View {
                     }
                 }
             }
-            .onAppear { focused = true }
+            .onAppear {
+                focused = true
+                if linkedCode != nil { signIn() }
+            }
             .interactiveDismissDisabled(isLoading)
         }
     }
