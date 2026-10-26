@@ -18,8 +18,22 @@ struct ExerciseSessionView: View {
     @State private var startedAt = Date.now
     @State private var recorded = false
     @State private var pausedForDialog = false
+    /// Ring rotation banked from previous steps, so reversing direction doesn't jump.
+    @State private var ringBaseAngle: Double = 0
+
+    /// Degrees per second for the wavy ring; it turns one way while holding, the other while resting.
+    private static let ringSpeed: Double = 12
 
     private var step: ExerciseStep? { steps.indices.contains(index) ? steps[index] : nil }
+
+    private func stepElapsed(at now: Date) -> TimeInterval {
+        paused ? elapsedBeforePause : elapsedBeforePause + now.timeIntervalSince(stepStartedAt)
+    }
+
+    private func ringAngle(for step: ExerciseStep, at now: Date) -> Double {
+        let direction: Double = step.action == .hold ? 1 : -1
+        return ringBaseAngle + direction * Self.ringSpeed * stepElapsed(at: now)
+    }
 
     var body: some View {
         NavigationStack {
@@ -74,7 +88,7 @@ struct ExerciseSessionView: View {
     }
 
     private func running(_ step: ExerciseStep, now: Date) -> some View {
-        let elapsed = paused ? elapsedBeforePause : elapsedBeforePause + now.timeIntervalSince(stepStartedAt)
+        let elapsed = stepElapsed(at: now)
         let remaining = max(0, Double(step.duration) - elapsed)
         let secondsLeft = Int(remaining.rounded(.up))
         let isHold = step.action == .hold
@@ -109,6 +123,16 @@ struct ExerciseSessionView: View {
                     .animation(.spring(duration: 0.3), value: secondsLeft)
             }
             .frame(width: 260, height: 260)
+            .background {
+                // Fixed-size ring just outside the full circle; only rotates, never scales.
+                TimelineView(.animation(paused: paused)) { context in
+                    WavyRing()
+                        .stroke((isHold ? Color.pink : Color.mint).opacity(0.6), style: StrokeStyle(lineWidth: 3, lineCap: .round))
+                        .frame(width: 300, height: 300)
+                        .rotationEffect(.degrees(ringAngle(for: step, at: context.date)))
+                }
+                .accessibilityHidden(true)
+            }
 
             Text(isHold ? "Relax in \(secondsLeft)…" : "Squeeze in \(secondsLeft)…")
                 .font(.title3.weight(.semibold))
@@ -206,6 +230,7 @@ struct ExerciseSessionView: View {
     }
 
     private func advance(to newIndex: Int) {
+        if let step { ringBaseAngle = ringAngle(for: step, at: .now) }
         elapsedBeforePause = 0
         stepStartedAt = .now
         if newIndex >= steps.count {
@@ -217,6 +242,27 @@ struct ExerciseSessionView: View {
             // A hold starts a new repetition; switching to rest gets the short beep.
             tones.play(steps[index].action == .hold ? .newRepetition : .transition)
         }
+    }
+}
+
+/// A circle whose edge undulates in a sine wave.
+nonisolated private struct WavyRing: Shape {
+    var waves = 14
+    var amplitude: CGFloat = 4
+
+    func path(in rect: CGRect) -> Path {
+        let center = CGPoint(x: rect.midX, y: rect.midY)
+        let radius = min(rect.width, rect.height) / 2 - amplitude
+        let segments = 360
+        var path = Path()
+        for i in 0...segments {
+            let theta = Double(i) / Double(segments) * 2 * .pi
+            let r = radius + amplitude * sin(Double(waves) * theta)
+            let point = CGPoint(x: center.x + r * cos(theta), y: center.y + r * sin(theta))
+            if i == 0 { path.move(to: point) } else { path.addLine(to: point) }
+        }
+        path.closeSubpath()
+        return path
     }
 }
 
