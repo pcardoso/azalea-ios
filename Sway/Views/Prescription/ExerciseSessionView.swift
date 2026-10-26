@@ -137,16 +137,20 @@ struct ExerciseSessionView: View {
             .background {
                 // Fixed-size rings just outside the full circle, counter-rotating; they never scale.
                 // The wave turns inside the path so the gradient stays upright like the circle's.
+                // Neighbouring rings overlap slightly.
                 TimelineView(.animation(paused: paused)) { context in
                     let angle = ringMotion(for: step, at: context.date).angle
-                    let stroke = StrokeStyle(lineWidth: 5, lineCap: .round)
+                    let rings = [
+                        (shape: WavyRing(rotation: .degrees(angle)), width: 4.0, size: 300.0),
+                        (shape: WavyRing(rotation: .degrees(-angle), waves: 18), width: 6.0, size: 332.0),
+                    ]
                     ZStack {
-                        WavyRing(rotation: .degrees(angle))
-                            .stroke(fill, style: stroke)
-                            .frame(width: 300, height: 300)
-                        WavyRing(rotation: .degrees(-angle), waves: 18)
-                            .stroke(fill, style: stroke)
-                            .frame(width: 334, height: 334)
+                        ForEach(rings.indices, id: \.self) { i in
+                            let ring = rings[i]
+                            ring.shape
+                                .stroke(fill, style: StrokeStyle(lineWidth: ring.width, lineCap: .round))
+                                .frame(width: ring.size, height: ring.size)
+                        }
                     }
                     .animation(fillAnimation, value: index)
                 }
@@ -157,6 +161,7 @@ struct ExerciseSessionView: View {
                 .font(.title3.weight(.semibold))
                 .foregroundStyle(.secondary)
                 .opacity(countingDown ? 1 : 0)
+                .offset(y: 20)
 
             Spacer()
 
